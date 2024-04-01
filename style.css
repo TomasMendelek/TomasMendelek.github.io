@@ -319,3 +319,106 @@ section.yo{
     text-decoration: none;
     color:rgba(189, 26, 26, 0.712) ;
 }
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* CSS para hacer que el menú de navegación permanezca fijo y cambie de color */
+header.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ajusta el índice z si es necesario */
+    background-color: #FFF; /* Color de fondo del menú de navegación */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    padding: 10px 0; /* Ajusta el espaciado interno del menú de navegación */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra al menú */
+}
+
+/* Estilo para el menú de navegación cuando se hace scroll */
+header.header.scrolled {
+    height: 70px; /* Altura más pequeña del menú de navegación al hacer scroll */
+    background-color: #FFF; /* Color de fondo del menú de navegación cuando se hace scroll */
+}
+
+/* Ajusta el margen superior del contenido principal para evitar que se superponga con el menú fijo */
+body {
+    margin-top: 100px; /* Ajusta según la altura del menú de navegación */
+}
+
+/* Ajusta el tamaño del logo y del texto del menú al hacer scroll */
+header.header.scrolled .imglogo {
+    width: 50px; /* Ajusta el tamaño del logo al hacer scroll */
+    height: 50px; /* Ajusta el tamaño del logo al hacer scroll */
+}
+
+header.header.scrolled .jaggerburger {
+    font-size: 20px; /* Ajusta el tamaño del texto del menú al hacer scroll */
+    margin-left: 10px; /* Ajusta el margen izquierdo del texto del menú al hacer scroll */
+}
+/* Estilos para hacer la página responsive */
+@media screen and (max-width: 768px) {
+    header.header {
+        padding: 10px 0; /* Ajusta el espaciado interno del menú de navegación para dispositivos móviles */
+    }
+
+    .presentacion {
+        flex-direction: column; /* Cambia la dirección del flexbox para dispositivos móviles */
+        padding: 100px 10px; /* Ajusta el relleno superior e inferior para dispositivos móviles */
+    }
+
+    .foto-burger {
+        max-width: 100%; /* Hace que la imagen sea responsive en dispositivos móviles */
+        padding-left: 0; /* Elimina el relleno izquierdo para dispositivos móviles */
+        margin-top: 0; /* Elimina el margen superior para dispositivos móviles */
+    }
+
+    .cont {
+        padding-left: 0; /* Elimina el relleno izquierdo para dispositivos móviles */
+        margin-top: 20px; /* Ajusta el margen superior para dispositivos móviles */
+        text-align: center; /* Centra el texto para dispositivos móviles */
+    }
+
+    .cont h1 {
+        font-size: 40px; /* Ajusta el tamaño del título para dispositivos móviles */
+    }
+
+    .cont p {
+        margin-left: 0; /* Elimina el margen izquierdo para dispositivos móviles */
+        margin-right: 0; /* Elimina el margen derecho para dispositivos móviles */
+    }
+
+    .conocenos {
+        width: 150px; /* Ajusta el ancho del botón para dispositivos móviles */
+        margin: 0 auto; /* Centra el botón para dispositivos móviles */
+    }
+
+    .flecha {
+        display: none; /* Oculta la flecha para dispositivos móviles */
+    }
+
+    .prod1,
+    .prod2,
+    .prod3 {
+        flex-direction: column; /* Cambia la dirección del flexbox para dispositivos móviles */
+        gap: 20px; /* Ajusta el espacio entre los productos para dispositivos móviles */
+    }
+
+    .Producto1 {
+        width: 100%; /* Ajusta el ancho de los productos para dispositivos móviles */
+    }
+
+    .Producto1 img {
+        width: 100%; /* Hace que las imágenes de los productos sean responsive en dispositivos móviles */
+        margin-top: 10px; /* Ajusta el margen superior de las imágenes para dispositivos móviles */
+    }
+
+    section.Contacto .contact,
+    section.yo .nombrecontactoo,
+    section.yo .infoyo {
+        margin-left: 10px; /* Ajusta el margen izquierdo para dispositivos móviles */
+        margin-right: 10px; /* Ajusta el margen derecho para dispositivos móviles */
+    }
+}
+
